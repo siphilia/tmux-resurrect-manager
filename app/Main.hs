@@ -20,8 +20,16 @@ main = do
 showHelp :: IO ()
 showHelp = TIO.putStrLn [st|Usage:
     trm list
+        Show the all resurrect files.
+
     trm alias RESURRECT_NAME ALIAS_NAME
+        Create ALIAS_NAME symbolic link that link to RESURRECT_NAME.
+
     trm last [ALIAS_NAME | RESURRECT_NAME ]
+        Change the "last" symbolic link to ALIAS_NAME or RESURRECT_NAME.
+
+    trm path
+        Show directory path in which resurrect files is saved.
 |]
 
 printResurrectList :: IO ()
